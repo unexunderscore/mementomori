@@ -1,0 +1,26 @@
+html, body{
+    height: 100%;
+}
+
+body{
+    background: linear-gradient(#9c4cd1, #e24a85);
+    background-repeat: no-repeat;
+    
+    font-family: 'Poppins', sans-serif;
+}
+
+.memento-title{
+    text-transform: uppercase;
+    text-shadow: 2px 2px black;
+    font-weight: 800;
+    color: antiquewhite;
+
+    margin: 3rem 0 5rem 0;
+}
+
+.boxes{
+    border: 1px solid white;
+    margin: 0.1rem;
+    width: 15px;
+    height: 15px;
+}
