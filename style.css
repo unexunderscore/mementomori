@@ -20,6 +20,10 @@ body{
 
     margin: 3rem 0 5rem 0;
 }
+.memento-title a{
+    text-decoration: unset;
+    color: unset;
+}
 
 .boxes{
     border: 1px solid white;
@@ -39,3 +43,4 @@ margin-bottom: 1rem;
 .hide {
     display: none !important;
 }
+
