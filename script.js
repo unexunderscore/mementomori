@@ -35,6 +35,7 @@ const yearDiff = nowYear-birthYear;
 // Container
 const container = document.getElementById("container");
 
+
 // Creating a div box
 function multipleBoxes() {
         $(".year").append('<div class="boxes"></div>');

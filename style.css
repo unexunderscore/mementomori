@@ -24,8 +24,12 @@ body{
 .boxes{
     border: 1px solid white;
     margin: 0.1rem;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
+}
+
+.year:nth-child(10n){
+margin-bottom: 1rem;
 }
 
 .select-date{
