@@ -3,13 +3,16 @@ html, body{
 }
 
 body{
+    /*linear-gradient(#9c4cd1, #e24a85);*/
     background: linear-gradient(#9c4cd1, #e24a85);
+    background-attachment: fixed;
     background-repeat: no-repeat;
-    
+    background-size: cover;
     font-family: 'Poppins', sans-serif;
 }
 
 .memento-title{
+    letter-spacing: 15px;
     text-transform: uppercase;
     text-shadow: 2px 2px black;
     font-weight: 800;
@@ -23,4 +26,12 @@ body{
     margin: 0.1rem;
     width: 15px;
     height: 15px;
+}
+
+.select-date{
+    color: antiquewhite;
+}
+
+.hide {
+    display: none !important;
 }
