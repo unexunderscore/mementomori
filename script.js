@@ -35,6 +35,15 @@ const yearDiff = nowYear-birthYear;
 // Container
 const container = document.getElementById("container");
 
+// Selecting div-title classes
+let divTitle = document.getElementsByClassName("div-title");
+
+
+// Selecting boxes
+let dBoxes = document.getElementsByClassName("boxes"); 
+
+// Convert year diff to weeks
+let weeks = yearDiff*52;
 
 // Creating a div box
 function multipleBoxes() {
@@ -47,13 +56,30 @@ function drawBoxes() {
     // Creating endYear times a div with classlist of year
     for(let i=1; i<=endYear; i++){
         let mDiv = document.createElement("div");
-        mDiv.classList.add("year");
-        mDiv.classList.add("d-flex");
-        mDiv.classList.add("flex-row");
+        mDiv.classList.add("year","d-flex","flex-row");
         container.append(mDiv);
+        let label = document.createElement("div");
+        
         }
     for (let i=1; i<=52; i++) {
         $("#container").append(multipleBoxes());
+        
     }
+    $(".year").append('<div class="div-title"></div>');
     sDate.classList.add("hide");
+    
+//Selecting last div (div-title) every 5th
+for(let k=1; k<=divTitle.length; k++){
+    if((k+1)%5==0){
+        let chosenDiv = divTitle[k];
+        chosenDiv.classList.add("divfifth");
+        chosenDiv.innerHTML = k+1;
+    }
 }
+
+//Selecting bday lenght divs
+for(let y=0; y<weeks; y++){
+    dBoxes[y].classList.add("pastDiv");
+}
+}
+
