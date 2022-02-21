@@ -13,24 +13,16 @@ const [hour, minutes, seconds] = [date.getHours(), date.getMinutes(), date.getSe
 // Get year
 const nowYear = date.getFullYear();
 // Get month
-const nowMonth = date.getMonth();
+const nowMonth = date.getMonth()+1;
 // Get day
-const nowDay = date.getDay();
+const nowDay = date.getDate();
 
 //Setting end year of calendar
 let endYear = document.getElementById("deathDate").value;
 
-// Selecting input value
-let birthday = document.getElementById("birthday").value;
-const birthYear = Number(birthday.substring(0, 4));
-
 
 // Selecting date container
 let sDate = document.getElementById("sDate");
-
-// Checking the difference between years (this number will be set for rows)
-const yearDiff = nowYear-birthYear;
-
 
 // Container
 const container = document.getElementById("container");
@@ -42,8 +34,7 @@ let divTitle = document.getElementsByClassName("div-title");
 // Selecting boxes
 let dBoxes = document.getElementsByClassName("boxes"); 
 
-// Convert year diff to weeks
-let weeks = yearDiff*52;
+
 
 // Creating a div box
 function multipleBoxes() {
@@ -52,7 +43,47 @@ function multipleBoxes() {
 
 // Append a div box to main div in the container
 function drawBoxes() {
+
+    // Getting the birthday value (year-mm-dd)
+    let birthday = document.getElementById("birthday").value;
+    // Cutting down the year from value and making number from it
+    const birthYear = Number(birthday.substring(0, 4));
+    // Cutting down the month from value and making number from it
+    const birthMonth = Number(birthday.substring(5, 7));
+    // Cutting down the month from value and making number from it
+    const dayOfBirth = Number(birthday.substring(8));
+
+    // Present year we subtraction the birth year. 
+    const yearDiff = nowYear-birthYear;
+
+    // yearDiff convert to months
+    let yearDiffInMonths = yearDiff*12;
+
+    
+
+    // Setting the end year of the callendar
     let endYear = document.getElementById("deathDate").value;
+
+
+    // Setting month diff
+    let monthMinus = 0;
+    let monthPlus = 0;
+    // DayDiff
+    let dayDiff = 0;
+    dayDiff = nowDay-dayOfBirth;
+
+    if(nowMonth>=birthMonth){
+        monthPlus = nowMonth-birthMonth; 
+    } else {
+        monthMinus = birthMonth-nowMonth; 
+    }
+
+    console.log(dayDiff);
+
+    let pastWeeks = Math.round(((yearDiffInMonths-monthMinus+monthPlus+(dayDiff/28))/12)*52);
+    // Convert year diff to weeks
+    let weeks = (yearDiff*52);
+    //console.log((yearDiffInMonths-monthMinus+monthPlus)/12);
     // Creating endYear times a div with classlist of year
     for(let i=1; i<=endYear; i++){
         let mDiv = document.createElement("div");
@@ -78,7 +109,7 @@ for(let k=1; k<=divTitle.length; k++){
 }
 
 //Selecting bday lenght divs
-for(let y=0; y<weeks; y++){
+for(let y=0; y<pastWeeks; y++){
     dBoxes[y].classList.add("pastDiv");
 }
 }
