@@ -102,3 +102,94 @@ body{
     border-radius: 12px;
     text-align: center;
 }
+
+@media screen and (max-width: 673px) {
+    .boxes{
+        border: 1px solid white;
+        margin: 0.07rem;
+        width: 8px;
+        height: 8px;
+    }
+  }
+
+
+  @media screen and (max-width: 563px) {
+    .boxes{
+        border: 1px solid white;
+        margin: 0.06rem;
+        width: 7px;
+        height: 7px;
+    }
+
+    .memento-title{
+        letter-spacing: 10px;
+        text-transform: uppercase;
+        text-shadow: 2px 2px black;
+        font-weight: 800;
+        color: antiquewhite;
+        transition: 0.420s;
+        margin: 3rem 0 3rem 0;
+        font-size: 30px;
+    }
+
+
+  }
+
+  @media screen and (max-width: 463px) {
+    .boxes{
+        border: 1px solid white;
+        margin: 0.03rem;
+        width: 6px;
+        height: 6px;
+    }
+
+    .divfifth{
+        color: rgb(0, 0, 0);
+        padding: 0;
+        
+        text-align: center;
+        align-content: center;
+        font-size: 10px;
+        width: 10px;
+        height: 10px;
+    }
+  }
+
+
+  @media screen and (max-width: 420px) {
+    
+    .select-date{
+        font-size: 12px;
+    }
+
+    
+    .select-bd{
+        margin-right: 4rem;
+    }
+
+    .select-dd{
+        margin-right: 0.6rem;
+    }
+
+  }
+
+
+  @media screen and (max-width: 383px) {
+    .boxes{
+        border: 1px solid white;
+        margin: 0.03rem;
+        width: 5px;
+        height: 5px;
+    }
+
+    .memento-title{
+        letter-spacing: 9px;
+        text-transform: uppercase;
+        text-shadow: 2px 2px black;
+        font-weight: 800;
+        color: antiquewhite;
+        transition: 0.420s;
+        margin: 3rem 0 3rem 0;
+        font-size: 26px;
+    }
+  }
