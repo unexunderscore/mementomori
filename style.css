@@ -158,13 +158,11 @@ body{
         font-size: 12px;
     }
 
-    ::-webkit-input-placeholder {
+    #birthday::placeholder {
+        padding-left: 33px;
         text-align: center;
-      }
-      
-      :-moz-placeholder {
-        text-align: center;
-      }
+    }
+
     .select-bd{
         margin-right: 4rem;
     }
