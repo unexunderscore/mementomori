@@ -162,7 +162,9 @@ body{
         font-size: 12px;
     }
 
-    
+    #birthday{
+        padding-left: 10px;
+    }
     .select-bd{
         margin-right: 4rem;
     }
@@ -170,7 +172,10 @@ body{
     .select-dd{
         margin-right: 0.6rem;
     }
-
+    .btn-done{
+        margin-left: 35%;
+        
+    }
   }
 
 
