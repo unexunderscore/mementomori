@@ -108,6 +108,10 @@ body{
     }
   }
 
+  #birthday{
+    padding-left: 5%;
+    
+}
 
   @media screen and (max-width: 563px) {
     .boxes{
@@ -156,11 +160,6 @@ body{
     
     .select-date{
         font-size: 12px;
-    }
-
-    #birthday::placeholder {
-        padding-left: 33px;
-        text-align: center;
     }
 
     .select-bd{
