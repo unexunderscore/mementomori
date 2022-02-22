@@ -34,7 +34,9 @@ let divTitle = document.getElementsByClassName("div-title");
 // Selecting boxes
 let dBoxes = document.getElementsByClassName("boxes"); 
 
+// Selecting middle box container
 
+let mBox = document.getElementById("middleBox");
 
 // Creating a div box
 function multipleBoxes() {
@@ -43,7 +45,8 @@ function multipleBoxes() {
 
 // Append a div box to main div in the container
 function drawBoxes() {
-
+    // Middle box remove vh to move everything upper
+    mBox.style.marginTop = "1vh";
     // Getting the birthday value (year-mm-dd)
     let birthday = document.getElementById("birthday").value;
     // Cutting down the year from value and making number from it
@@ -120,4 +123,4 @@ for(let y=0; y<pastWeeks; y++){
 }
 
 }
-
+mBox.style.marginTop = "20vh";
