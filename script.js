@@ -46,7 +46,7 @@ function multipleBoxes() {
 // Append a div box to main div in the container
 function drawBoxes() {
     // Middle box remove vh to move everything upper
-    mBox.style.marginTop = "1vh";
+    mBox.style.marginTop = "0";
     // Getting the birthday value (year-mm-dd)
     let birthday = document.getElementById("birthday").value;
     // Cutting down the year from value and making number from it
