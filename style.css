@@ -95,12 +95,14 @@ body{
     border-radius: 25px;
     width: 100px;
     margin: 2rem 0 0 9rem;
+   
 }
 
 #birthday{
     width: 140px;
     border-radius: 12px;
     text-align: center;
+   
 }
 
 @media screen and (max-width: 673px) {
@@ -163,7 +165,7 @@ body{
     }
 
     #birthday{
-        padding-left: 10px;
+        padding-left: 22px;
     }
     .select-bd{
         margin-right: 4rem;
