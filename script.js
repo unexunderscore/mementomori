@@ -68,22 +68,28 @@ function drawBoxes() {
     // Setting month diff
     let monthMinus = 0;
     let monthPlus = 0;
+    let monthDiff = nowMonth-birthMonth;
     // DayDiff
     let dayDiff = 0;
     dayDiff = nowDay-dayOfBirth;
 
+    /*
     if(nowMonth>=birthMonth){
         monthPlus = nowMonth-birthMonth; 
     } else {
         monthMinus = birthMonth-nowMonth; 
     }
+    let pastWeeks = Math.round(((yearDiffInMonths-monthMinus+monthPlus+(dayDiff/28))/12)*52); COPIED FROM TWO LINES UNDER
+    */
+    console.log(Math.round(dayDiff/7));
+    console.log("Mathround: " + (Math.round(((yearDiffInMonths+monthDiff)/12))));
+    console.log("Without Mathround: " + ((((yearDiffInMonths+monthDiff+(dayDiff/28))/12)*52)));
+    console.log("Floor: " + (Math.floor(yearDiffInMonths+monthDiff+(dayDiff/28))/12));
 
-    console.log(dayDiff);
-
-    let pastWeeks = Math.round(((yearDiffInMonths-monthMinus+monthPlus+(dayDiff/28))/12)*52);
+    let pastWeeks = Math.round(((yearDiffInMonths+monthDiff+(dayDiff/28))/12)*52);
     // Convert year diff to weeks
     let weeks = (yearDiff*52);
-    //console.log((yearDiffInMonths-monthMinus+monthPlus)/12);
+    
     // Creating endYear times a div with classlist of year
     for(let i=1; i<=endYear; i++){
         let mDiv = document.createElement("div");
@@ -112,5 +118,6 @@ for(let k=1; k<=divTitle.length; k++){
 for(let y=0; y<pastWeeks; y++){
     dBoxes[y].classList.add("pastDiv");
 }
+
 }
 
