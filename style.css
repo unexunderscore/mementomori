@@ -79,9 +79,10 @@ body{
 }
 
 #deathDate{
-    width: 140px;
+    width: 145px;
     border-radius: 12px;
     text-align: center;
+    font-size: 14px;
 }
 
 
@@ -93,7 +94,8 @@ body{
 }
 
 #birthday{
-    width: 140px;
+    font-size: 14px;
+    width: 145px;
     border-radius: 12px;
     text-align: center;
    
@@ -109,8 +111,7 @@ body{
   }
 
   #birthday{
-    padding-left: 5%;
-    
+    padding-left: 10px;
 }
 
   @media screen and (max-width: 563px) {
