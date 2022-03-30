@@ -130,6 +130,7 @@ body{
 }
 
   @media screen and (max-width: 563px) {
+
     .boxes{
         border: 1px solid white;
         margin: 0.06rem;
@@ -152,7 +153,11 @@ body{
         font-size: 9px;
     }
 
-
+    #floatText{
+        margin: 12rem 0 0 -1rem;
+        padding: 0;
+        font-size: 28px;
+    }
   }
 
   @media screen and (max-width: 463px) {
