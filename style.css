@@ -69,6 +69,10 @@ body{
     background-color: #ffffff;
 }
 
+.pastDivLast {
+    background-color: rgb(255, 251, 5);
+    border: 1px solid rgb(0, 0, 0);
+}
 
 .select-bd{
     margin-right: 5rem;
@@ -99,6 +103,18 @@ body{
     border-radius: 12px;
     text-align: center;
    
+}
+
+#floatText{
+    text-align: center;
+    display: none;
+    margin-top: 13rem;
+    margin-left: -1rem;
+    font-size: 50px;
+    font-weight: 600;
+    position: absolute;
+    -webkit-text-stroke: 2px rgb(0, 0, 0);
+    -webkit-text-fill-color: white;
 }
 
 @media screen and (max-width: 673px) {

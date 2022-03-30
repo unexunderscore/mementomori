@@ -21,6 +21,10 @@ const nowDay = date.getDate();
 let endYear = document.getElementById("deathDate").value;
 
 
+//selecting Float Text
+let floatText = document.getElementById("floatText");
+
+
 // Selecting date container
 let sDate = document.getElementById("sDate");
 
@@ -67,6 +71,7 @@ function drawBoxes() {
     // Setting the end year of the callendar
     let endYear = document.getElementById("deathDate").value;
 
+    let counter = 0;
 
     // Setting month diff
     let monthMinus = 0;
@@ -83,11 +88,12 @@ function drawBoxes() {
         monthMinus = birthMonth-nowMonth; 
     }
     let pastWeeks = Math.round(((yearDiffInMonths-monthMinus+monthPlus+(dayDiff/28))/12)*52); COPIED FROM TWO LINES UNDER
-    */
+    
     console.log(Math.round(dayDiff/7));
     console.log("Mathround: " + (Math.round(((yearDiffInMonths+monthDiff)/12))));
     console.log("Without Mathround: " + ((((yearDiffInMonths+monthDiff+(dayDiff/28))/12)*52)));
     console.log("Floor: " + (Math.floor(yearDiffInMonths+monthDiff+(dayDiff/28))/12));
+    */
 
     let pastWeeks = Math.round(((yearDiffInMonths+monthDiff+(dayDiff/28))/12)*52);
     // Convert year diff to weeks
@@ -120,7 +126,17 @@ for(let k=1; k<=divTitle.length; k++){
 //Selecting bday lenght divs
 for(let y=0; y<pastWeeks; y++){
     dBoxes[y].classList.add("pastDiv");
+    counter += 1;
+    if(counter == 52){
+        counter = 0;
+    }
+    console.log(counter)
+    if((pastWeeks-1 == y)){
+        dBoxes[y].classList.add("pastDivLast");
+    }
 }
+floatText.style.display = "block";
+floatText.innerHTML = counter + " weeks have passed" +"<br />" + "Learn REACT" + "<br />" + "KEEP CODING";
 
 }
 mBox.style.marginTop = "20vh";
